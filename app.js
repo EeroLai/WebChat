@@ -11,13 +11,13 @@ var expressLayouts = require('express-ejs-layouts');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 // set layouts
 app.use(expressLayouts);
 app.set('layout', 'layouts/layout');
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
