@@ -4,7 +4,7 @@ Add By Eero Lai
 ## use
 - TailWindCSS
 - micosoft/SignalR
-
+- pinia/nuxt (npm install pinia @pinia/nuxt --legacy-peer-deps) RC有相容性問題
 
 # Back-End
 ## use

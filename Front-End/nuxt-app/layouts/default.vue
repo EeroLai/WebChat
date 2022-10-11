@@ -1,15 +1,15 @@
 <template>
-    <div class="flex">
-        <div class="bg-gray-600 to-emerald-500 w-1/4 min-h-screen h-screen px-2 py-2">
-            <Account />
-            <!-- <AccountRegister/> -->
+    <div class="flex h-screen justify-center">
+      <div class="bg-gray-600 w-1/3">
+        <BaseHeader />
+  
+        <div class="h-[90%] p-3 bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700">
+          <div class="bg-gray-500 h-full rounded p-2 shadow-md">
+            <slot />
+          </div>
         </div>
-        <div class="flex-1 min-h-screen h-screen">
-            <BaseHeader />
-            <div class="h-[90%] px-2 py-2">
-                <slot />
-            </div>
-            <BaseFooter />
-        </div>
+  
+        <BaseFooter />
+      </div>
     </div>
-</template>
+  </template>
