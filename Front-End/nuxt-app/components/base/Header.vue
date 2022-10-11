@@ -9,7 +9,7 @@
             <div>Chat Room</div>
         </div>
         <div class="w-1/5 h-full flex justify-center items-center">
-            <button class="ring-2 ring-slate-500 rounded py-1 px-3" v-on:click="Exit">
+            <button class="ring-2 ring-slate-500 rounded py-1 px-3" v-if="chatStore.joinState" @click="Exit">
                 Exit
             </button>
         </div>
@@ -21,10 +21,9 @@
 import { useChatStore } from '~~/store/chat.js'
 
 const chatStore = useChatStore();
-console.log(chatStore.join);
-
-function Exit() {
-    chatStore.join++
-    console.log(chatStore.join);
+async function Exit(){
+    chatStore.joinState = false;
+    chatStore.userName = '';
+    await navigateTo('/');
 }
 </script>

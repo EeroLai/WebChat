@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia'
 
 export const useChatStore = defineStore({
-  id: 'chat-store',
+  id: 'store',
   state: () => {
     return {
-      join: 0,
+      joinState: false,
+      userName: '',
     }
   },
   actions: {},
