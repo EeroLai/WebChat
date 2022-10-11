@@ -14,5 +14,6 @@ Add By Eero Lai
 
 
 To do
-
+- 聊天室UI
+- 聊天室頁面邏輯
 - SignalR 退出連線中斷
