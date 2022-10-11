@@ -11,3 +11,8 @@ Add By Eero Lai
 - CORS
 - SignalR
 - Swagger
+
+
+To do
+
+- SignalR 退出連線中斷
