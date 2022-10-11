@@ -4,11 +4,11 @@
       <div class="font-mono text-center m-3">
         <span class="text-2xl text-white">Welcome Chat Room</span>\
       </div>
-      <div class="my-2">
+      <div class="my-2 px-3">
         <span class="text-white">User Name</span>
-        <input class="w-full my-3 px-2 rounded-md" v-model="userName">
+        <input class="flex w-full my-3 px-2 rounded-md" v-model="userName">
       </div>
-      <div class="my-2 flex justify-end">
+      <div class="px-3 flex justify-end ">
         <button class="bg-slate-100 py-1 px-2 rounded-md shadow-slate-800" @click="join">Join</button>
       </div>
     </div>
