@@ -1,15 +1,13 @@
 import { defineStore } from 'pinia'
+import * as signalR from "@microsoft/signalr";
 
 export const useChatStore = defineStore({
   id: 'store',
-  state: () => {
-    return {
+  state: () => (
+    {
       joinState: false,
       userName: '',
+      chatContent: []
     }
-  },
-  actions: {},
-  getters: {
-    test: state => state.join,
-  },
+  )
 })
