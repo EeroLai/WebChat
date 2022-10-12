@@ -20,6 +20,10 @@ import { useChatStore } from '~~/store/chat.js'
 const chatStore = useChatStore();
 const route = useRoute()
 const userName = ref();
+
+chatStore.userName = '';
+chatStore.joinState = false;
+
 async function join() {
   if (!userName.value) alert('User Name Empty!');
 

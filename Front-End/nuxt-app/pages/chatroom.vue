@@ -1,6 +1,11 @@
 <template>
-    <div>
-        Test
+    <div class="h-full">
+        <div class="h-[95%] py-3 overflow-y-auto">
+            <ChatContent />
+        </div>
+        <div class="h-[5%] ">
+            <ChatSend />
+        </div>
     </div>
 </template>
 
@@ -9,6 +14,7 @@ import * as signalR from "@microsoft/signalr";
 import { useChatStore } from '~~/store/chat.js'
 
 const chatStore = useChatStore();
+if (!chatStore.userName) navigateTo('/')
 let connection = new signalR.HubConnectionBuilder()
     .withUrl("https://localhost:7103/Hubs/ChatHub", {
         skipNegotiation: true,
