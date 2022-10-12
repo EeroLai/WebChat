@@ -19,18 +19,19 @@ let connection = new signalR.HubConnectionBuilder()
     .build();
 
 connection.on("ChatRoom", (user, msg) => {
-    console.log(user);
-    console.log(msg);
+    chatStore.chatContent.push({ 'user': user, 'msg': msg });
 });
 
+connection.start()
+    .then(function () {
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
 function SendMsg() {
-    connection.start()
-        .then(function () {
-            connection.invoke("SendMessage", chatStore.userName, content.value).catch(function (err) {
-                return console.error(err.toString());
-            });
-        }).catch(function (err) {
-            return console.error(err.toString());
-        });
+    connection.invoke("SendMessage", chatStore.userName, content.value).catch(function (err) {
+        return console.error(err.toString());
+    });
+    content.value = '';
 }
 </script>
