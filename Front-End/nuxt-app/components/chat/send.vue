@@ -18,9 +18,12 @@ let connection = new signalR.HubConnectionBuilder()
     })
     .build();
 
-connection.on("ChatRoom", (user, msg) => {
-    chatStore.chatContent.push({ 'user': user, 'msg': msg });
-});
+if (chatStore.firstCreateSignalR) {
+    connection.on("ChatRoom", (user, msg) => {
+        chatStore.chatContent.push({ 'user': user, 'msg': msg });
+    });
+    chatStore.firstCreateSignalR = false;
+}
 
 connection.start()
     .then(function () {
