@@ -1,17 +1,25 @@
-Add By Eero Lai
+# Nuxt3-SignalR
 
-# Front-End
-## use
+Simple WebChat 
+
+## Front-End
+### use
 - TailWindCSS
 - micosoft/SignalR
 - pinia/nuxt (npm install pinia @pinia/nuxt --legacy-peer-deps) RC有相容性問題
 
-# Back-End
-## use
+## Back-End
+### use
 - CORS
 - SignalR
 - Swagger
 
+### run server
 
-# To do
-- SignalR 退出連線中斷
+```
+npm install
+```
+
+```
+npm run dev -o
+```
