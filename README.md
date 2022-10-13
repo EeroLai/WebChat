@@ -1,6 +1,6 @@
 # Nuxt3-SignalR
 
-Simple WebChat 
+Simple WebChat through Fornt-End Nuxt and Back-End .Net Core develop
 
 ## Front-End
 ### use
